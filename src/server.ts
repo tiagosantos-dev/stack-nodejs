@@ -1,20 +1,11 @@
 import express, { response } from 'express';
 import './database';
+import {routes} from './routes';
  
 const app = express();
 
-
-app.get('/', (request, response)=>{
-    return response.json({
-        "message":"Ola NLW 05!"
-    });
-  });
-
-  app.post('/', (request, reponse)=>{
-    return response.json({
-        message:"usuario Salvo com sucesso"
-    });
-  });
+app.use(express.json())
+app.use(routes);
 
 
 const PORT = 3333;

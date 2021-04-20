@@ -8,7 +8,7 @@ class Setting{
     id: string;
 
     @Column()
-    user: string;
+    username: string;
 
     @Column()
     chat: boolean;
